@@ -1,0 +1,38 @@
+{
+  "name": "b-memo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@types/markdown-it": "^0.0.7",
+    "install": "^0.12.2",
+    "markdown-it": "^8.4.2",
+    "npm": "^6.9.0",
+    "pouchdb-adapter-idb": "^7.0.0",
+    "pouchdb-core": "^7.0.0",
+    "vue": "^2.6.6",
+    "vue-class-component": "^6.0.0",
+    "vue-moment": "^4.0.0",
+    "vue-property-decorator": "^7.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-typescript": "^3.5.0",
+    "@vue/cli-service": "^3.5.0",
+    "typescript": "^3.2.1",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
