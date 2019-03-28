@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+<div v-if='loading'>loading...</div>
     <div v-for="memo in memos">
 {{memo.t  | moment("YYYY-MM-DD HH:mm")}}
 <hr/>
@@ -20,14 +21,16 @@ const md = new _MarkdownIt();
 export default class HelloWorld extends Vue {
   memo:any = {};
   memos:Array<any> = [];
+  loading= false;
   async mounted() {
     var posterId = location.hash.substring(1);
+    this.loading = true;
     this.memos = await this.getPosts(posterId);
-    
 		this.memos.filter((memo)=>memo.content).forEach((memo)=>{
 			console.log(memo.content);
 			memo.html = md.render(memo.content);
 		});
+    this.loading = false;
 	}
 	async getPosts(addr:string) {
 var query = {
